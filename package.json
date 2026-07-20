@@ -1,0 +1,11 @@
+{
+  "name": "vertice-motors",
+  "private": true,
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "dev:site": "npm run dev -w @vertice/site",
+    "dev:admin": "npm run dev -w @vertice/admin",
+    "build": "npm run build -w @vertice/site && npm run build -w @vertice/admin",
+    "lint": "npm run lint -w @vertice/site && npm run lint -w @vertice/admin"
+  }
+}
