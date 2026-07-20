@@ -22,3 +22,25 @@ Este documento evita que pesquisas externas sejam transformadas em promessas sem
 ## Regra para novas fontes
 
 Registrar URL, organização, data, amostra/mercado, afirmação apoiada, limitações e data de acesso. Preferir documentação oficial, pesquisa primária e dados próprios.
+
+
+## Relatório Técnico – Arquitetura e Diretrizes de Desenvolvimento
+
+Documento fornecido pelo responsável do produto em 20/07/2026 e incorporado como fonte interna de requisitos.
+
+### Pontos aceitos
+
+- Next.js/TypeScript, Vercel, Supabase, Auth, Storage e RLS;
+- cadastro automotivo detalhado;
+- gestão de catálogos, imagens, usuários, leads e auditoria;
+- pipeline comercial, dashboards, SEO e práticas de desempenho;
+- rate limit, backups, logs e controle de permissões.
+
+### Ajustes de interpretação
+
+- Tailwind CSS é uma opção, não obrigação arquitetural; adotar somente se trouxer consistência sem migração cosmética desnecessária.
+- “Todo conteúdo no banco” não inclui código, componentes, contratos, traduções estáveis ou conteúdo versionado que faça mais sentido no repositório.
+- Lighthouse acima de 90 é meta de laboratório e não substitui Core Web Vitals reais.
+- “Sem necessidade de reescrever” foi convertido em baixo acoplamento, contratos claros e evolução por migrations; nenhuma arquitetura elimina reescritas futuras.
+- Renavam, placa, VIN, documentos e dados financeiros foram classificados como restritos.
+- “Excluir veículo” prioriza arquivamento/exclusão lógica para preservar auditoria e relações.
