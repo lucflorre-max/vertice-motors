@@ -9,7 +9,7 @@ Evoluir a Vértice Motors como um ecossistema de varejo automotivo digital premi
 - `packages/core`: contratos e integração compartilhada.
 - `supabase`: autenticação, banco, RLS, storage e migrations.
 
-Leia também `docs/PRODUCT_VISION.md`, `docs/ARCHITECTURE.md` e `docs/ROADMAP.md` antes de propor mudanças relevantes.
+Leia também `docs/PRODUCT_VISION.md`, `docs/REQUIREMENTS.md`, `docs/ARCHITECTURE.md` e `docs/ROADMAP.md` antes de propor mudanças relevantes.
 
 ## Regras inegociáveis
 
@@ -24,7 +24,7 @@ Leia também `docs/PRODUCT_VISION.md`, `docs/ARCHITECTURE.md` e `docs/ROADMAP.md
 9. Preserve acessibilidade: HTML semântico, teclado, foco visível, contraste, labels, mensagens de erro e redução de movimento.
 10. Otimize imagens automotivas sem ocultar defeitos do veículo. IA pode padronizar fundo/luz, mas não pode alterar cor, rodas, avarias, acessórios ou condição real.
 11. Recursos de IA conversacional, VIN, DRE e Data Lake exigem fornecedor, base legal, contrato de dados e critérios de aceite antes da implementação.
-12. Não introduza dependências sem justificar necessidade, manutenção, segurança e impacto no bundle.
+12. Não introduza dependências sem justificar necessidade, manutenção, segurança e impacto no bundle.\n13. Não tratar Lighthouse como única métrica: ele é diagnóstico de laboratório; Core Web Vitals de campo são a meta principal.\n14. Status de veículo e lead devem preservar histórico de transições; não apagar rastreabilidade com uma simples sobrescrita.\n15. Placa, Renavam, VIN/chassi, documentos e dados financeiros são restritos por padrão e não devem ser expostos publicamente.
 
 ## Fluxo obrigatório
 
@@ -43,7 +43,7 @@ Leia também `docs/PRODUCT_VISION.md`, `docs/ARCHITECTURE.md` e `docs/ROADMAP.md
 - SEO por veículo: URL estável, title/description únicos, canonical, Open Graph e dados estruturados `Car` + `Offer`.
 - Formulários devem impedir duplicidade acidental, validar no servidor/banco e registrar origem/campanha quando disponível.
 - Leads e financiamentos devem possuir histórico de status e responsável.
-- Ações administrativas sensíveis devem gerar auditoria.
+- Ações administrativas sensíveis devem gerar auditoria.\n- Lighthouse >= 90 nas quatro categorias é meta de laboratório para rotas representativas, sem substituir LCP/INP/CLS de campo.\n- Rate limit, idempotência, backup com restauração testada e atribuição de origem/campanha devem ser considerados nas funcionalidades correspondentes.
 
 ## Definição de pronto
 
