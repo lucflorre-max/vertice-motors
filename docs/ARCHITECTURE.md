@@ -80,3 +80,25 @@ Cada veículo publicado deve possuir:
 - redirecionamento ou estado indisponível ao sair do estoque.
 
 Referências: https://schema.org/Car e https://schema.org/Offer
+
+
+## Catálogos e histórico
+
+Marcas, modelos, categorias e opcionais devem ser entidades normalizadas quando precisarem de gestão própria, reutilização ou filtros. Evitar texto livre duplicado.
+
+Mudanças relevantes em veículos, leads, usuários e financiamento devem gerar eventos ou registros históricos com ator, instante, estado anterior/novo e motivo. Exclusão lógica/arquivamento é preferível para entidades relacionadas a operação e auditoria.
+
+## Analytics e métricas
+
+Eventos mínimos: visualização de veículo, busca, filtro, compartilhamento, clique em WhatsApp/telefone, envio de formulário, agendamento, proposta e resultado comercial.
+
+Eventos devem ter nomes e propriedades versionados. Definir consentimento, retenção, pseudonimização e deduplicação antes de coletar. Toda métrica de dashboard precisa de fórmula e fonte documentadas.
+
+## Confiabilidade
+
+- rate limit em login, formulários e endpoints públicos;
+- idempotência para evitar leads/solicitações duplicadas;
+- observabilidade de erros e ações sensíveis;
+- estratégia de backup e teste de restauração;
+- ambientes separados de desenvolvimento/preview/produção;
+- migrations progressivas e compatíveis com rollback ou correção subsequente.
